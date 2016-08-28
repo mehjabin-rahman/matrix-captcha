@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<form method="post" action="">{% csrf_token %}
+    <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
+    {% for key, value in data.items %}
+    <input name="{{ key }}" type="hidden" value="{{ value }}" />
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

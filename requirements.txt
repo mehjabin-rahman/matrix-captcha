@@ -1,0 +1,5 @@
+Django==1.10
+django-redis==4.4.4
+redis==2.10.5
+requests==2.10.0
+wheel==0.24.0
